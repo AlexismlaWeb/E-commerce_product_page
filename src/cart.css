@@ -131,3 +131,13 @@
 .button_checkout button:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 950px) {
+  .Showbasket {
+    top: 13%;
+    width: 95%;
+    height: 45%;
+    left: 2.5%;
+    z-index: 9999;
+  }
+}

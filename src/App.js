@@ -217,6 +217,30 @@ function App() {
                     MainImageThumbnail(selectThumbnailStyle);
                   }}
                 />
+                <img
+                  src={NextIcon}
+                  alt="icon-next"
+                  className="icon_next_mobile"
+                  onClick={() => {
+                    if (selectThumbnailStyle !== thumbnailImages.length - 1) {
+                      MainImage(selectThumbnailStyle + 1);
+                    } else {
+                      MainImage(0);
+                    }
+                  }}
+                />
+                <img
+                  src={NextIcon}
+                  alt="icon-previous"
+                  className="icon_previous_mobile"
+                  onClick={() => {
+                    if (selectThumbnailStyle > 0) {
+                      MainImage(selectThumbnailStyle - 1);
+                    } else {
+                      MainImage(thumbnailImages.length - 1);
+                    }
+                  }}
+                />
               </div>
               <div className="select_main_photo">
                 <div className="thumbnail_group">
