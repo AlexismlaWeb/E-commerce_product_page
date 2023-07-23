@@ -1,38 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .App {
-  text-align: center;
+  width: 85vw;
+  font-family: "Kumbh Sans";
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  height: 15vh;
+  margin-block-end: 7%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header_container h1 {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header_left_side {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.header_sneakers {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 91%;
+}
+
+.header_menu_item {
+  cursor: pointer;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  font-weight: 300;
+  color: rgb(108, 108, 108);
+}
+.header_menu_item:hover {
+  border-bottom: 4px solid hsl(26, 100%, 55%);
+  color: black;
+}
+
+.header_rigth_side {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.notification-bubble {
+  width: 1vw;
+  height: 1.5vh;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  position: absolute;
+  padding: 2px;
+  top: 5%;
+  right: 11.3vw;
+}
+
+.cart_container {
+  cursor: pointer;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cart_container img {
+  width: 20%;
+}
+
+.cart_container img:hover {
+  opacity: 0.7;
+}
+
+.profil_container img {
+  width: 50%;
+  height: 45%;
+}
+
+.profil_container img:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.profil_container {
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+}
+
+.main_page_container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.main_page_left_side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_photo img {
+  border-radius: 2%;
+  max-width: 80%;
+  margin-block-end: 5%;
+  cursor: pointer;
+}
+
+.thumbnail_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 12vh;
+}
+
+.thumbnail_group img {
+  width: 18%;
+  border-radius: 10%;
+}
+
+.thumbnail_group img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.main_page_rigth_side {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.info_sneakers_container {
+  padding-right: 20%;
+  margin-block: 10%;
+}
+
+.group_info h6 {
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 1px;
+  margin-bottom: 3%;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 120%;
+  margin-block-end: 7%;
+}
+
+.resum_sneaker {
+  font-weight: 400;
+  line-height: 130%;
+  font-size: 16px;
+  color: rgb(130, 130, 130);
+  margin-block-end: 5%;
+}
+.okok {
+  display: flex;
+  justify-content: space-around;
+  margin-block-end: 5%;
+}
+
+.group_button_add_cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.group_price_reduction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.price {
+  font-weight: 700;
+  font-size: x-large;
+}
+.percentage_reduction {
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  border-radius: 7px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  text-align: center;
+  padding-inline: 3%;
+  height: 4vh;
+  margin-inline-start: 10px;
+}
+
+.old_price {
+  text-decoration: line-through;
+  color: rgb(169, 169, 169);
+  font-size: small;
+  margin-block-start: 10px;
+  margin-block-end: 10%;
+}
+
+.add-to-cart-button {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 60%;
+}
+
+.add-to-cart-button button {
+  width: 100%;
+  height: 7vh;
+  border-radius: 7px;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  color: white;
+  font-weight: 700;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: small;
+  box-shadow: 0px 15px 10px hsl(25, 100%, 94%);
+  cursor: pointer;
+}
+
+.add-to-cart-button img {
+  margin-inline-end: 10px;
+  width: 6%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-to-cart-button:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-quantity-button {
+  width: 60%;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(234, 28%, 93%);
+  border-radius: 7px;
+  padding-inline: 5%;
+}
+
+.add-quantity-button input {
+  width: 80%;
+}
+
+.button_container img:hover {
+  opacity: 0.8;
+}
+
+.button_container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button_container img {
+  width: 40%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  cursor: default;
+}
+
+.centered_div {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.select_thumbnail {
+  border: 3px solid hsl(26, 100%, 55%);
+  opacity: 0.5;
+}
+
+.lightbox_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .lightbox_container img {
+  width: 28%;
+  height: 60%;
+  margin-block-end: 3%;
+  margin-top: 3%;
+  border-radius: 10px;
+} */
+
+.icon_close {
+  width: 1.2%;
+  position: absolute;
+  top: 5%;
+  left: 65%;
+  cursor: pointer;
+}
+
+.icon_close:hover {
+  filter: sepia(0) hue-rotate(90deg);
+}
+
+.main_picture {
+  width: 35%;
+  height: 65%;
+  margin-block-end: 2%;
+  margin-top: 3%;
+  border-radius: 10px;
+}
+
+.thumbnail_group_lightbox {
+  display: flex;
+  justify-content: space-around;
+  width: 26%;
+}
+
+.thumbnail_group_lightbox img {
+  width: 19%;
+  height: 70%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-block-end: 3%;
+  margin-top: 3%;
+}
+
+.thumbnail_group_lightbox img:hover {
+  opacity: 0.8;
+}
+
+.select_thumbnail_lightbox {
+  border: 3px solid hsl(26, 100%, 55%);
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.icon_next {
+  width: 10px;
+  height: 15px;
+  padding: 1.2%;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 40vh;
+  right: 30.5vw;
+  cursor: pointer;
+}
+
+.icon_previous {
+  width: 10px;
+  height: 15px;
+  padding: 1.2%;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 40vh;
+  left: 30.5vw;
+  cursor: pointer;
+}
+
+.icon_next:hover,
+.icon_previous:hover {
+  background-color: hsl(25, 100%, 89%);
+}
+
+@media (min-width: 320px) {
+  .header_menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header_sneakers {
+    font-size: x-large;
+  }
+
+  .header_rigth_side {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header_container {
+    border: none;
+    margin-block-end: 0;
+    height: 10vh;
+  }
+
+  .cart_container {
+    width: 50%;
+  }
+
+  .profil_container {
+    width: 30%;
+  }
+  .main_page_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .thumbnail_group {
+    display: none;
+  }
+
+  .main_photo img {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .disable {
+    display: none;
+  }
+  .App {
+    width: 100%;
+  }
+
+  .main_page_left_side {
+    width: 100%;
+  }
+
+  .main_page_rigth_side {
+    width: 85%;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 85%;
+  }
+
+  .info_sneakers_container {
+    padding-right: 0;
+  }
+
+  .resum_sneaker {
+    line-height: 170%;
+    font-size: 14px;
+  }
+
+  .price_container {
+    display: flex;
+    flex-direction: row;
+    margin-block-end: 8%;
+  }
+
+  .old_price {
+    margin: auto;
+  }
+
+  .group_button_add_cart {
+    flex-direction: column;
+    height: 31%;
+  }
+
+  .centered_div {
+    width: 100%;
+  }
+
+  .add-quantity-button {
+    width: 100%;
+    height: 7.5vh;
+  }
+
+  .button_container {
+    width: 10%;
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+    height: 7.5vh;
   }
 }
