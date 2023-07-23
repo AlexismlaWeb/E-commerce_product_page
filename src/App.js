@@ -13,6 +13,7 @@ import TrashIcon from "../src/images/icon-delete.svg";
 import CloseIcon from "../src/images/icon-close.svg";
 import NextIcon from "../src/images/icon-next.svg";
 import PreviousIcon from "../src/images/icon-previous.svg";
+import IconMenu from "../src/images/icon-menu.svg";
 
 import ImgProduct1 from "../src/images/image-product-1.jpg";
 import ImgProduct2 from "../src/images/image-product-2.jpg";
@@ -28,6 +29,7 @@ function App() {
   const [quantity, setQuantity] = useState(0);
   const [cart, setCart] = useState(0);
   const [show, setShow] = useState(false);
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
   const [mainPicture, setMainPicture] = useState(ImgProduct1);
   const [selectThumbnailStyle, setSelectThumbnailStyle] = useState(0);
   const [mainPictureThumbnail, setMainPictureThumbnail] = useState(ImgProduct1);
@@ -80,6 +82,33 @@ function App() {
     <div className="App">
       <div className="header_container">
         <div className="header_left_side">
+          <div className="header_menu_mobile">
+            <img
+              className="icon_mobile_menu"
+              src={IconMenu}
+              alt="icon_menu"
+              onClick={() => setShowMenuMobile(!showMenuMobile)}
+            />
+            {showMenuMobile ? (
+              <div className="menu_mobile_item">
+                <div className="group_menu">
+                  <img
+                    src={CloseIcon}
+                    alt="icon-close"
+                    className="icon_close_mobile"
+                    onClick={() => setShowMenuMobile(!showMenuMobile)}
+                  />
+                  <div className="menu_item_group">
+                    <p className="menu_item_mobile">Collection</p>
+                    <p className="menu_item_mobile">Men</p>
+                    <p className="menu_item_mobile">Women</p>
+                    <p className="menu_item_mobile">About</p>
+                    <p className="menu_item_mobile">Contact</p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
           <div className="header_sneakers">
             <p>sneakers</p>
           </div>
